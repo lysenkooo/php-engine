@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /site/
+RewriteCond %{REQUEST_FILENAME} !\.(html|css|less|js|jpg|png|txt|ico)$ [NC,OR]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php
+
+ErrorDocument 404 /static/error.html
+ErrorDocument 500 /static/error.html
